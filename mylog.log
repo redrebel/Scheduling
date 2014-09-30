@@ -1,0 +1,27 @@
+[2014-09-30 19:06:47,613] [DEBUG] [main] [net.cjred.scheduler.quartz.quickstart.QuartzTest:15] - d
+[2014-09-30 19:07:32,402] [DEBUG] [main] [net.cjred.scheduler.quartz.quickstart.QuartzTest:15] - d
+[2014-09-30 19:09:43,330] [INFO ] [main] [org.quartz.impl.StdSchedulerFactory:1184] - Using default implementation for ThreadExecutor
+[2014-09-30 19:09:43,360] [INFO ] [main] [org.quartz.core.SchedulerSignalerImpl:61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+[2014-09-30 19:09:43,362] [INFO ] [main] [org.quartz.core.QuartzScheduler:240] - Quartz Scheduler v.2.2.1 created.
+[2014-09-30 19:09:43,402] [INFO ] [main] [org.quartz.simpl.RAMJobStore:155] - RAMJobStore initialized.
+[2014-09-30 19:09:43,403] [INFO ] [main] [org.quartz.core.QuartzScheduler:305] - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 3 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+[2014-09-30 19:09:43,403] [INFO ] [main] [org.quartz.impl.StdSchedulerFactory:1339] - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+[2014-09-30 19:09:43,403] [INFO ] [main] [org.quartz.impl.StdSchedulerFactory:1343] - Quartz scheduler version: 2.2.1
+[2014-09-30 19:09:43,403] [DEBUG] [main] [net.cjred.scheduler.quartz.quickstart.QuartzTest:15] - d
+[2014-09-30 19:09:43,404] [INFO ] [main] [org.quartz.core.QuartzScheduler:575] - Scheduler MyScheduler_$_NON_CLUSTERED started.
+[2014-09-30 19:09:43,404] [INFO ] [main] [org.quartz.core.QuartzScheduler:694] - Scheduler MyScheduler_$_NON_CLUSTERED shutting down.
+[2014-09-30 19:09:43,404] [INFO ] [main] [org.quartz.core.QuartzScheduler:613] - Scheduler MyScheduler_$_NON_CLUSTERED paused.
+[2014-09-30 19:09:43,404] [DEBUG] [main] [org.quartz.simpl.SimpleThreadPool:328] - Shutting down threadpool...
+[2014-09-30 19:09:43,404] [DEBUG] [main] [org.quartz.simpl.SimpleThreadPool:395] - Shutdown of threadpool complete.
+[2014-09-30 19:09:43,404] [INFO ] [main] [org.quartz.core.QuartzScheduler:771] - Scheduler MyScheduler_$_NON_CLUSTERED shutdown complete.
+[2014-09-30 19:09:43,410] [DEBUG] [MyScheduler_QuartzSchedulerThread] [org.quartz.core.QuartzSchedulerThread:276] - batch acquisition of 0 triggers
+[2014-09-30 19:09:43,837] [DEBUG] [MyScheduler_Worker-3] [org.quartz.simpl.SimpleThreadPool$WorkerThread:612] - WorkerThread is shut down.
+[2014-09-30 19:09:43,839] [DEBUG] [MyScheduler_Worker-2] [org.quartz.simpl.SimpleThreadPool$WorkerThread:612] - WorkerThread is shut down.
+[2014-09-30 19:09:43,837] [DEBUG] [MyScheduler_Worker-1] [org.quartz.simpl.SimpleThreadPool$WorkerThread:612] - WorkerThread is shut down.
