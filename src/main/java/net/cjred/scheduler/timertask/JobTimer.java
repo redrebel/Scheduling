@@ -8,8 +8,14 @@ import java.util.TimerTask;
 public class JobTimer extends TimerTask {
 
   public void run() {
-    System.out.println("Generating report");
-    //TODO generate report
+    Calendar date = Calendar.getInstance();
+    String stamp = date.get(Calendar.HOUR_OF_DAY)+":"
+            +date.get(Calendar.MINUTE)+":"
+            +date.get(Calendar.SECOND)+":"
+            +date.get(Calendar.MILLISECOND);
+    System.out.println(stamp +" " + "Generating report");
+
+
   }
 
 }
@@ -31,8 +37,8 @@ class MainApplication {
     timer.schedule(
       new JobTimer(),
       date.getTime(),
-      //1000 * 60
-      1000 * 60 * 60 * 24 * 7
+      1000 * 5
+      //1000 * 60 * 60 * 24 * 7
     );
   }
 }

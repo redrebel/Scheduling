@@ -36,7 +36,7 @@ public class QuartzTest {
           .withIdentity("trigger1","group1")
           .startNow()
           .withSchedule(simpleSchedule()
-              .withIntervalInSeconds(10)
+              .withIntervalInSeconds(5)
               .repeatForever())
           .build();
       
