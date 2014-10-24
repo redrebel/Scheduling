@@ -1,4 +1,4 @@
-package net.cjred.scheduler.quartz.quickstart;
+package net.cjred.scheduler.quartz;
 
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;

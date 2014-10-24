@@ -1,4 +1,4 @@
-package net.cjred.scheduler.quartz.quickstart;
+package net.cjred.scheduler.quartz;
 
 
 import org.quartz.JobDetail;
@@ -10,12 +10,10 @@ import static org.quartz.JobBuilder.*;
 import static org.quartz.TriggerBuilder.*;
 import static org.quartz.SimpleScheduleBuilder.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-public class QuartzTest {
+public class QuartzTimer {
 
-  private static Logger logger = LoggerFactory.getLogger(QuartzTest.class);
+  //private static Logger logger = LoggerFactory.getLogger(QuartzTimer.class);
   
   
   public static void main(String[] args) {
@@ -31,7 +29,7 @@ public class QuartzTest {
       .withIdentity("job1","group1")
       .build();
       
-      // Trigger the job to run now, and then repeat every 40 seconds
+      // Trigger the job to run now, and then repeat every 5 seconds
       Trigger trigger = newTrigger()
           .withIdentity("trigger1","group1")
           .startNow()
@@ -43,15 +41,14 @@ public class QuartzTest {
       // Tell quartz to schedule the job using out trigger
       scheduler.scheduleJob(job, trigger);
       
-      try {
-        Thread.sleep(60000);
-      } catch (InterruptedException e) {
-        // TODO Auto-generated catch block
-        e.printStackTrace();
-      }
+      Thread.sleep(60000);
+
       scheduler.shutdown();
+
     }catch(SchedulerException se){
       se.printStackTrace();
+    }catch (InterruptedException e) {
+      e.printStackTrace();
     }
 
   }
