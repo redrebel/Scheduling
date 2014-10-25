@@ -21,7 +21,8 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    
+
+      <!-- Quartz -->
     <dependency>
       <groupId>org.quartz-scheduler</groupId>
       <artifactId>quartz</artifactId>
@@ -32,19 +33,30 @@
       <artifactId>quartz-jobs</artifactId>
       <version>2.2.1</version>
     </dependency>
-    
-    <dependency>
- <groupId>org.slf4j</groupId>
- <artifactId>slf4j-api</artifactId>
- <version>1.6.6</version>
-</dependency>
-    
 
+    <!-- Spring -->
     <dependency>
- <groupId>org.slf4j</groupId>
- <artifactId>slf4j-simple</artifactId>
- <version>1.6.6</version>
-</dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>4.1.1.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context-support</artifactId>
+      <version>4.1.1.RELEASE</version>
+    </dependency>
+
+    <!-- log -->
+    <dependency>
+     <groupId>org.slf4j</groupId>
+     <artifactId>slf4j-api</artifactId>
+     <version>1.6.6</version>
+    </dependency>
+    <dependency>
+     <groupId>org.slf4j</groupId>
+     <artifactId>slf4j-simple</artifactId>
+     <version>1.6.6</version>
+    </dependency>
     
 
     

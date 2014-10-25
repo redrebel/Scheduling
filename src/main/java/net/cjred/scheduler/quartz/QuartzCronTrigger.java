@@ -24,14 +24,14 @@ public class QuartzCronTrigger {
       scheduler.start();
 
       // define the job and tie it to our HelloJob class
-      JobDetail job = newJob(Hello.class)
+      JobDetail job = newJob(MyJob.class)
               .withIdentity("job1", "group1")
               .build();
 
       // Trigger the job to run now, ss mm hh dd MM Week
       Trigger trigger = newTrigger()
               .withIdentity("trigger1", "group1")
-              .withSchedule(cronSchedule("0/10 * 18 * * ?"))
+              .withSchedule(cronSchedule("0/5 * * * * ?"))
               .build();
 
       // Tell quartz to schedule the job using out trigger

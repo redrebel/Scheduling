@@ -25,7 +25,7 @@ public class QuartzTimer {
       scheduler.start();
       
       // define the job and tie it to our HelloJob class
-      JobDetail job = newJob(Hello.class)
+      JobDetail job = newJob(MyJob.class)
       .withIdentity("job1","group1")
       .build();
       
