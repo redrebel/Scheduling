@@ -784,7 +784,7 @@
       <workItem from="1414502123418" duration="206000" />
       <workItem from="1414847307956" duration="809000" />
       <workItem from="1415022539047" duration="1071000" />
-      <workItem from="1415107236320" duration="1157000" />
+      <workItem from="1415107236320" duration="1318000" />
     </task>
     <task id="LOCAL-00001" summary="start quartz+spring">
       <created>1414248947177</created>
@@ -802,7 +802,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12680000" />
+    <option name="totallyTimeSpent" value="12841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="22" width="1350" height="790" extended-state="0" />
