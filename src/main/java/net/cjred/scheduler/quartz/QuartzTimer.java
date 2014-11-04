@@ -20,7 +20,6 @@ public class QuartzTimer {
     try{
       // Grab the Scheduler instance from the Factory
       Scheduler scheduler  = StdSchedulerFactory.getDefaultScheduler();
-      //logger.info("d");
       // and start it off
       scheduler.start();
       
