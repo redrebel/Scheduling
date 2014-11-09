@@ -12,5 +12,6 @@ public class MyJob implements Job {
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         Hello hello = new Hello();
         hello.print();
+      throw new JobExecutionException();
     }
 }
