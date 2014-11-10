@@ -1,20 +1,17 @@
-package net.cjred.scheduler.quartz;
+package net.cjred.scheduler.quartz.JobListener;
 /**
  * Quartz+CronTrigger
  * Created by cjred77@gmail.com on 2014-10-24.
  */
 
-import net.cjred.scheduler.quartz.JobListener.MyJobFailedListener;
-import org.quartz.JobDetail;
-import org.quartz.Scheduler;
-import org.quartz.SchedulerException;
-import org.quartz.Trigger;
+import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
+import org.quartz.impl.matchers.GroupMatcher;
+import org.quartz.impl.matchers.KeyMatcher;
 
 import static org.quartz.CronScheduleBuilder.cronSchedule;
 import static org.quartz.JobBuilder.newJob;
 import static org.quartz.TriggerBuilder.newTrigger;
-import static org.quartz.impl.matchers.GroupMatcher.*;
 
 
 public class QuartzJobListener {
@@ -26,8 +23,9 @@ public class QuartzJobListener {
       scheduler.start();
 
       // define the job and tie it to our HelloJob class
-      JobDetail job = newJob(MyJob.class)
-              .withIdentity("job1", "group1")
+      JobKey jobKey = new JobKey("job1", "group1");
+      JobDetail job = newJob(MyJobFailed.class)
+              .withIdentity(jobKey)
               .build();
 
       // Trigger the job to run now, ss mm hh dd MM Week
@@ -40,11 +38,12 @@ public class QuartzJobListener {
       //scheduler.getListenerManager().addJobListener(new MyJobFailedListener());
 
       // match (listen to) all jobs in given group
-      scheduler.getListenerManager().addJobListener(new MyJobFailedListener(), groupEquals("FAILED JOB"));
+      scheduler.getListenerManager().addJobListener(new MyJobFailedListener(), GroupMatcher.jobGroupEquals("group1"));
+      //scheduler.getListenerManager().addJobListener(new MyJobFailedListener(), KeyMatcher.keyEquals(jobKey));
 
 
-      // Tell quartz to schedule the job using out trigger
-      scheduler.scheduleJob(job, trigger);
+              // Tell quartz to schedule the job using out trigger
+              scheduler.scheduleJob(job, trigger);
 
       Thread.sleep(60000);
 

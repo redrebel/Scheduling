@@ -21,7 +21,7 @@ public class MyJobFailedListener implements JobListener{
 
     @Override
     public void jobExecutionVetoed(JobExecutionContext jobExecutionContext) {
-
+      //System.out.println("Report generation error 2");
     }
 
     @Override
