@@ -11,9 +11,9 @@ import static org.quartz.TriggerBuilder.*;
 import static org.quartz.SimpleScheduleBuilder.*;
 
 
-public class QuartzTimer {
+public class QuartzSimpleTrigger {
 
-  //private static Logger logger = LoggerFactory.getLogger(QuartzTimer.class);
+  //private static Logger logger = LoggerFactory.getLogger(QuartzSimpleTrigger.class);
   
   
   public static void main(String[] args) {
